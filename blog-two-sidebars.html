@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Ocean: Responsive, Retina Website Template</title>
+
+	<meta name="description" content="ADD A DESCRIPTION!!!" />
+	<meta name="keywords" content="ADD KEYWORDS!!!"  />
+	<meta name="author" content="http://themeforest.net/user/BryanMcAnulty" />
+	<meta name="dcterms.rightsHolder" content="Copyright Bryan McAnulty 2012. All Rights Reserved." />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all"/>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all"/>
+
+	<!-- Retina Webfont for Boostrap from Font Awesome - http://fortawesome.github.com/Font-Awesome -->
+	<link rel='stylesheet' type='text/css' href='css/font-awesome.css' />
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,700italic' rel='stylesheet' type='text/css'>
+
+	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-lightbox.js"></script>
+
+	<script type="text/javascript">
+		// Bootstrap Tooltips
+		$(document).ready(function () {
+			$('#twitterb').tooltip({
+				placement : 'bottom',
+				title : 'Twitter'
+			});
+			$('#facebookb').tooltip({
+				placement : 'bottom',
+				title : 'Facebook'
+			});
+			$('#googleb').tooltip({
+				placement : 'bottom',
+				title : 'Google+'
+			});
+			$('#pinterestb').tooltip({
+				placement : 'bottom',
+				title : 'Pinterest'
+			});
+			$('#flickrb').tooltip({
+				placement : 'bottom',
+				title : 'Flickr'
+			});
+			$('#rssb').tooltip({
+				placement : 'bottom',
+				title : 'RSS'
+			});
+			$('#wordb').tooltip({
+				placement : 'bottom',
+				title : 'Wordpress'
+			});
+			$('#stumbleb').tooltip({
+				placement : 'bottom',
+				title : 'Stumbleupon'
+			});
+		});
+	</script> 
+</head>
+<body>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>    
+				<a class="brand" href="index.html">Ocean</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li class="divider-vertical"></li> <!-- Nav Divider -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="icon-home"></i> Home
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="index.html">Full Slider Home 1</a></li>
+								<li><a href="home2.html">Side Slider Home 2</a></li>
+								<li><a href="home3.html">Hero Text Home 3</a></li>
+							</ul>
+						</li>
+						<li class="divider-vertical"></li> <!-- Nav Divider -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="icon-file"></i> Pages
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">Portfolios</a>
+									<ul class="dropdown-menu">
+										<li><a href="portfolio1.html">1 Column</a></li>
+										<li><a href="portfolio2.html" class="hidden-phone">2 Column</a></li>
+										<li><a href="portfolio3.html" class="hidden-phone">3 Column</a></li>
+										<li><a href="portfolio4.html" class="visible-desktop">4 Column</a></li>
+										<li><a href="gallery.html">Gallery</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">Content Pages</a>
+									<ul class="dropdown-menu">
+										<li><a href="content-right.html" class="hidden-phone">Left Sidebar</a></li>
+										<li><a href="content-left.html">Right Sidebar</a></li>
+										<li><a href="content-two-sidebars.html" class="hidden-phone">Two Sidebars</a></li>
+										<li><a href="content.html">No Sidebar</a></li>
+									</ul>
+								</li>
+								<li><a href="team.html">Team</a></li>
+								<li><a href="video.html">Video Page</a></li>
+								<li><a href="faq.html">FAQ</a></li>
+								<li><a href="typography.html" class="visible-desktop">Typography</a></li>
+								<li><a href="testimonials.html">Testimonials</a></li>
+								<li class="dropdown-submenu visible-desktop">
+									<a tabindex="-1" href="#" class="visible-desktop">Error Pages</a>
+									<ul class="dropdown-menu">
+										<li><a href="400.html">400</a></li>
+										<li><a href="401.html">401</a></li>
+										<li><a href="403.html">403</a></li>
+										<li><a href="404.html">404</a></li>
+										<li><a href="500.html">500</a></li>
+										<li><a href="503.html">503</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="divider-vertical"></li> <!-- Nav Divider -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="icon-pencil"></i> Blog
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="blog-left.html">Right Sidebar</a></li>
+								<li><a href="blog-right.html" class="hidden-phone">Left Sidebar</a></li>
+								<li><a href="blog-two-sidebars.html" class="hidden-phone">Two Sidebars</a></li>
+								<li><a href="blog-narrow.html" class="hidden-phone">Narrow Sidebar</a></li>
+								<li><a href="blog-post-detail.html">Detail Post Page</a></li>
+								<li><a href="blog-image-left.html" class="visible-desktop">Left Image Style</a></li>
+								<li><a href="blog-full.html" class="hidden-phone">Full Width</a></li>	  			            
+								<li><a href="blog-no-box.html">No Box Style Posts</a></li>
+							</ul>
+						</li>
+						<li class="divider-vertical"></li> <!-- Nav Divider -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="icon-star"></i> Features
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="widgets.html">Widgets</a></li>
+								<li><a href="pricing.html">Pricing</a></li>
+								<li><a href="buttons.html">Buttons</a></li>
+								<li><a href="store.html">Store Layout</a></li>
+							</ul>
+						</li>
+						<li class="divider-vertical"></li> <!-- Nav Divider -->
+						<li><a href="contact.html"><i class="icon-envelope"></i> Contact</a></li>
+						<li class="divider-vertical"></li>
+					</ul>
+					<form class="navbar-search pull-right">
+						<i class="icon-search"></i><input type="text" class="search-query" placeholder="Search">
+					</form>
+				</div> <!-- End nav-collapse -->
+			</div> <!-- End container -->
+		</div> <!-- End navbar-inner -->
+	</div> <!-- End navbar -->
+	
+	<div class="container-fluid">
+		<header>
+			<h1 class="site-logo"><a href="index.html">Ocean</a></h1>
+			<p>A Responsive Retina Ready Theme from <strong>Bryan McAnulty</strong></p>
+		</header> <!-- End Header -->
+
+	  	        <div class="row-fluid">
+	  	        
+	  	        <div class="span3">
+	  	          	<div class="sidebar">
+			  	        <div class="sidebar-section">
+			  	        	<h3><i class="icon-th"></i> About Ocean</h3>
+			  	            <img src="images/ocean-hero.jpg" class="sidebar-thumb" alt="" />
+			  	            <p>Quisque odio nisi, gravida a dapibus non, tincidunt ultricies est. Vivamus gravida tempus congue. Ut a tincidunt risus. Nam gravida diam nec nulla lobortis semper.</p>
+			  	            <p><a class="btn" href="#">Learn More</a></p>
+			  	        </div>
+			  	        <div class="sidebar-section">
+			  	        	<div class="twitter">
+			  	        	<h3><i class="icon-retweet"></i> Latest Tweets</h3>
+				  	        	<div id="twitter_update_list">
+				  	        	</div>
+				  	        	<script type="text/javascript" src="js/blogger.js"></script>
+				  	        	<script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline/VeloraStudios.json?callback=twitterCallback2&amp;count=3"></script>
+				  	        	<p class="follow"><a href="http://twitter.com/VeloraStudios">Follow @VeloraStudios!</a></p>
+			  	        	</div><!-- end twitter -->
+			  	        </div>
+		  	        </div>
+	  	          </div> <!-- End Sidebar -->
+
+	  	          	<div class="span5 blog">
+	  	          		<div class="blog-box">
+	  	          	      <h2><a href="#">A Great Blog Post from Ocean. Check Out All the Blog Layouts Available.</a></h2>
+	  	          	      <span class="blog-date"><i class="icon-calendar"></i> Posted on September 5, 2012</span> <span class="blog-author"><i class="icon-user"></i> by: Bryan McAnulty</span> <span class="blog-comments pull-right"><i class="icon-comment"></i> 2 Comments</span>
+	  	          	      <img src="images/slide-2.jpg" class="thumbnail" alt="" />
+	  	          	      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+	  	          	      <a class="btn" href="#">Read more &raquo;</a>
+	  	          	      <div class="blog-tags">
+	  	          	      	<i class="icon-tag"></i>
+	  	          	          <span class="label">Design</span>
+	  	          	          <span class="label">Development</span>
+	  	          	          <span class="label">Themes</span>
+	  	          	      </div>			  	        
+	  	          	  </div>
+	  	          	  <div class="blog-box">
+	  	          	      <h2><a href="#">Left Sidebar, Right Sidebar and Full Width Layouts Included</a></h2>
+	  	          	      <span class="blog-date"><i class="icon-calendar"></i> Posted on September 4, 2012</span> <span class="blog-author"><i class="icon-user"></i> by: Bryan McAnulty</span> <span class="blog-comments pull-right"><i class="icon-comment"></i> 4 Comments</span>
+	  	          	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse scelerisque, ipsum et semper varius, odio nisi eleifend leo, dignissim gravida justo massa at libero. Nunc sed diam non risus luctus vestibulum nec ac quam.
+	  	          	      </p>
+	  	          	      <img src="images/ocean-hero.jpg" class="thumbnail" alt="" />
+	  	          	      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+	  	          	      <a class="btn" href="#">Read more &raquo;</a>
+	  	          	      <div class="blog-tags">
+	  	          	      	<i class="icon-tag"></i>
+	  	          	          <span class="label">Design</span>
+	  	          	          <span class="label">Development</span>
+	  	          	          <span class="label">Themes</span>
+	  	          	      </div>			  	        
+	  	          	  </div>
+	  	          	  <div class="blog-box">
+	  	          	      <h2><a href="#">A Collection of Beautiful Sidebar Modules</a></h2>
+	  	          	      <span class="blog-date"><i class="icon-calendar"></i> Posted on September 3, 2012</span> <span class="blog-author"><i class="icon-user"></i> by: Bryan McAnulty</span> <span class="blog-comments pull-right"><i class="icon-comment"></i> 7 Comments</span>
+	  	          	      <img src="images/slide-4.jpg" class="thumbnail" alt="" />
+	  	          	      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+	  	          	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse scelerisque, ipsum et semper varius, odio nisi eleifend leo, dignissim gravida justo massa at libero. Nunc sed diam non risus luctus vestibulum nec ac quam.
+	  	          	      </p>
+	  	          	      <a class="btn" href="#">Read more &raquo;</a>
+	  	          	      <div class="blog-tags">
+	  	          	      	<i class="icon-tag"></i>
+	  	          	          <span class="label">Design</span>
+	  	          	          <span class="label">Themes</span>
+	  	          	      </div>			  	        
+	  	          	  </div>
+	  	          	  <div class="blog-box">
+	  	          	      <h2><a href="#">A Wonderfully Thought Out UI and Clean Code.</a></h2>
+	  	          	      <span class="blog-date"><i class="icon-calendar"></i> Posted on September 1, 2012</span> <span class="blog-author"><i class="icon-user"></i> by: Bryan McAnulty</span> <span class="blog-comments pull-right"><i class="icon-comment"></i> 10 Comments</span>
+	  	          	      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+	  	          	      <img src="images/slide-3.jpg" class="thumbnail" alt="" />
+	  	          	      <a class="btn" href="#">Read more &raquo;</a>
+	  	          	      <div class="blog-tags">
+	  	          	      	<i class="icon-tag"></i>
+	  	          	          <span class="label">Design</span>
+	  	          	          <span class="label">Development</span>
+	  	          	          <span class="label">Themes</span>
+	  	          	      </div>			  	        
+	  	          	  </div>
+	  	          </div> <!-- End Blog -->
+	
+	  	        <div class="span4">
+      	          	<div class="sidebar">
+    		  	        <div class="sidebar-section recent-posts">
+    		  	        	<h3><i class="icon-pencil"></i> Recent Posts</h3>
+    		  	            <ul>
+    		  	            	<li>
+    		  	            		<a href="#">
+    		  	            	    	<img src="images/slide-2.jpg" class="img-circle pull-left" alt="" />
+    		  	            	    	<h2>A Great Blog Post from Ocean. Check Out All the Blog Layouts Available.</h2>
+    		  	            	    	<span>July 29th, 2012<i class="icon-comment"></i> 5 Comments</span>
+    		  	            		</a>
+    		  	            	</li>
+    		  	            	<li>
+    		  	            		<a href="#">
+    		  	            			<img src="images/ocean-hero.jpg" class="img-circle pull-left" alt="" />
+    		  	            			<h2>Left Sidebar, Right Sidebar, Two Sidebar and Full Width Layouts Included.</h2>
+    		  	            			<span>July 29th, 2012<i class="icon-comment"></i> 4 Comments</span>
+    		  	            		</a>
+    		  	            	</li>
+    		  	            	<li>
+    		  	            		<a href="#">
+    		  	            			<img src="images/slide-4.jpg" class="img-circle pull-left" alt="" />
+    		  	            			<h2>A Collection of Beautiful Sidebar Modules.</h2>
+    		  	            			<span>July 29th, 2012<i class="icon-comment"></i> 7 Comments</span>
+    		  	            		</a>
+    		  	            	</li>
+    		  	            	<li>
+    		  	            		<a href="#">
+    		  	            			<img src="images/slide-3.jpg" class="img-circle pull-left" alt="" />
+    		  	            			<h2>A Wonderfully Thought Out UI and Clean Code.</h2>
+    		  	            			<span>July 29th, 2012<i class="icon-comment"></i> 10 Comments</span>
+    		  	            		</a>
+    		  	            	</li>
+    		  	            </ul>
+    		  	        </div>
+    		  	        <div class="sidebar-section">
+    		  	        	<ul class="nav nav-tabs" id="myTab">
+    		  	        	  <li class="active"><a href="#tags" data-toggle="tab">Tags</a></li>
+    		  	        	  <li><a href="#archive" data-toggle="tab">Archive</a></li>
+    		  	        	  <li><a href="#categories" data-toggle="tab">Categories</a></li>
+    		  	        	</ul>
+    		  	        	 
+    		  	        	<div class="tab-content">
+    		  	        	  <div class="tab-pane active" id="tags">
+    		  	        	  	  <i class="icon-tag"></i>
+    		  	        	  	  <span class="label">Design</span>
+    		  	        	  	  <span class="label">Development</span>
+    		  	        	  	  <span class="label">Themes</span>
+    		  	        	  	  <span class="label">HTML5</span>
+    		  	        	  	  <span class="label">Responsive</span>
+    		  	        	  	  <span class="label">CSS3</span>
+    		  	        	  	  <span class="label">Retina</span>
+    		  	        	  	  <span class="label">Themeforest</span>
+    		  	        	  </div>
+    		  	        	  <div class="tab-pane" id="categories">
+    		  	            	  <p><a href="#">Design</a></p>
+    		  	            	  <p><a href="#">Development</a></p>
+    		  	            	  <p><a href="#">Themes</a></p>
+    		  	            	  <p><a href="#">HTML5</a></p>
+    		  	            	  <p><a href="#">Responsive</a></p>
+    		  	        	  </div>
+    		  	        	  <div class="tab-pane" id="archive">
+    		  	        	  	  <h5>A Great Blog Post from Ocean. Check Out All the Blog Layouts Available.</h5>
+    		  	        	  	  <h5>A Great Blog Post from Ocean. Check Out All the Blog Layouts Available.</h5>
+    		  	        	  	  <h5>A Great Blog Post from Ocean. Check Out All the Blog Layouts Available.</h5>
+    		  	        	  </div>
+    		  	        	</div>
+    		  	        </div>
+    		  	        <div class="sidebar-section">
+    		  	        	<h3>About Our Blog</h3>
+    		  	            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+    		  	            <p><a class="btn" href="#">View details &raquo;</a></p>
+    		  	        </div>
+    	  	        </div>
+      	          </div> <!-- End Sidebar -->
+				
+	  	        
+	  	          
+				</div> <!-- End Row -->
+	  	  
+	</div> <!-- End container-fluid --> 
+
+	<footer>
+		<div class="container-fluid">
+			<div class="row-fluid footer-border">
+				<div class="span6">
+				   <p>Copyright © 2012 Your Company. All rights reserved.</p>
+				</div>
+				<div class="span6">
+					<div id="footer-menu" class="pull-right">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="blog-right.html">Blog</a></li>
+							<li><a href="portfolio3.html">Portfolio</a></li>
+							<li><a href="team.html">Team</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div> <!-- End Row -->
+			<div class="row-fluid footer-bottom">
+				<div class="span8 footer-subscribe">
+					<h4>Subscribe to Our Newsletter:</h4>
+					<!-- Begin MailChimp Signup Form -->
+					<form action="http://velorastudios.us5.list-manage.com/subscribe/post?u=3eb59c0744a850c1b1cab4c95&amp;id=a65e7f5a53" method="POST" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate subscribe-form" target="_blank">
+						<input type="text" name="MERGE1" id="MERGE1" size="25" maxlength="255" placeholder="Full Name" value="">
+
+						<input type="email" name="MERGE0" id="MERGE0" size="25" maxlength="255" placeholder="Email" value="">     
+
+						<input type="submit" class="default-btn small-btn" name="submit" value="Subscribe">
+
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</form>
+					<script type="text/javascript">
+						var fnames = new Array();var ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';
+						try {
+						  var jqueryLoaded=jQuery;
+						  jqueryLoaded=true;
+						} catch(err) {
+						  var jqueryLoaded=false;
+						}
+						var head= document.getElementsByTagName('head')[0];
+						if (!jqueryLoaded) {
+						  var script = document.createElement('script');
+						  script.type = 'text/javascript';
+						  script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
+						  head.appendChild(script);
+						  if (script.readyState && script.onload!==null){
+							  script.onreadystatechange= function () {
+									if (this.readyState == 'complete') mce_preload_check();
+							  }    
+						  }
+						}
+						var script = document.createElement('script');
+						script.type = 'text/javascript';
+						script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
+						head.appendChild(script);
+						var err_style = '';
+						try{
+						  err_style = mc_custom_error_style;
+						} catch(e){
+						  err_style = '#mc_embed_signup input.mce_inline_error{border-color:#6B0505;} #mc_embed_signup div.mce_inline_error{margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff;}';
+						}
+						var head= document.getElementsByTagName('head')[0];
+						var style= document.createElement('style');
+						style.type= 'text/css';
+						if (style.styleSheet) {
+						style.styleSheet.cssText = err_style;
+						} else {
+						style.appendChild(document.createTextNode(err_style));
+						}
+						head.appendChild(style);
+						setTimeout('mce_preload_check();', 250);
+
+						var mce_preload_checks = 0;
+						function mce_preload_check(){
+						  if (mce_preload_checks>40) return;
+						  mce_preload_checks++;
+						  try {
+							  var jqueryLoaded=jQuery;
+						  } catch(err) {
+							  setTimeout('mce_preload_check();', 250);
+							  return;
+						  }
+						  try {
+							  var validatorLoaded=jQuery("#fake-form").validate({});
+						  } catch(err) {
+							  setTimeout('mce_preload_check();', 250);
+							  return;
+						  }
+						  mce_init_form();
+						}
+						function mce_init_form(){
+						  jQuery(document).ready( function($) {
+							var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
+							var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
+							$("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
+							options = { url: 'http://velorastudios.us5.list-manage2.com/subscribe/post-json?u=3eb59c0744a850c1b1cab4c95&id=a65e7f5a53&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+										  beforeSubmit: function(){
+											  $('#mce_tmp_error_msg').remove();
+											  $('.datefield','#mc_embed_signup').each(
+												  function(){
+													  var txt = 'filled';
+													  var fields = new Array();
+													  var i = 0;
+													  $(':text', this).each(
+														  function(){
+															  fields[i] = this;
+															  i++;
+														  });
+													  $(':hidden', this).each(
+														  function(){
+															  var bday = false;
+															  if (fields.length == 2){
+																  bday = true;
+																  fields[2] = {'value':1970};//trick birthdays into having years
+															  }
+															if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
+															  this.value = '';
+											} else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
+															  this.value = '';
+											} else {
+												if (/\[day\]/.test(fields[0].name)){
+																	this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;                         
+												} else {
+																	this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+																}
+															}
+														  });
+												  });
+											  return mce_validator.form();
+										  }, 
+										  success: mce_success_cb
+									  };
+							$('#mc-embedded-subscribe-form').ajaxForm(options);
+							
+						  });
+						}
+						function mce_success_cb(resp){
+						  $('#mce-success-response').hide();
+						  $('#mce-error-response').hide();
+						  if (resp.result=="success"){
+							  $('#mce-'+resp.result+'-response').show();
+							  $('#mce-'+resp.result+'-response').html(resp.msg);
+							  $('#mc-embedded-subscribe-form').each(function(){
+								  this.reset();
+							});
+						  } else {
+							  var index = -1;
+							  var msg;
+							  try {
+								  var parts = resp.msg.split(' - ',2);
+								  if (parts[1]==undefined){
+									  msg = resp.msg;
+								  } else {
+									  i = parseInt(parts[0]);
+									  if (i.toString() == parts[0]){
+										  index = parts[0];
+										  msg = parts[1];
+									  } else {
+										  index = -1;
+										  msg = resp.msg;
+									  }
+								  }
+							  } catch(e){
+								  index = -1;
+								  msg = resp.msg;
+							  }
+							  try{
+								  if (index== -1){
+									  $('#mce-'+resp.result+'-response').show();
+									  $('#mce-'+resp.result+'-response').html(msg);            
+								  } else {
+									  err_id = 'mce_tmp_error_msg';
+									  html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
+									  
+									  var input_id = '#mc_embed_signup';
+									  var f = $(input_id);
+									  if (ftypes[index]=='address'){
+										  input_id = '#mce-'+fnames[index]+'-addr1';
+										  f = $(input_id).parent().parent().get(0);
+									  } else if (ftypes[index]=='date'){
+										  input_id = '#mce-'+fnames[index]+'-month';
+										  f = $(input_id).parent().parent().get(0);
+									  } else {
+										  input_id = '#mce-'+fnames[index];
+										  f = $().parent(input_id).get(0);
+									  }
+									  if (f){
+										  $(f).append(html);
+										  $(input_id).focus();
+									  } else {
+										  $('#mce-'+resp.result+'-response').show();
+										  $('#mce-'+resp.result+'-response').html(msg);
+									  }
+								  }
+							  } catch(e){
+								  $('#mce-'+resp.result+'-response').show();
+								  $('#mce-'+resp.result+'-response').html(msg);
+							  }
+						  }
+						}
+					</script>
+					<!--End mc_embed_signup-->
+					<p class="subscribe-p">Get the best tips in your inbox! (Mailchimp email subscribe form with validation)</p>
+
+					<h4>Follow Us:</h4>
+					<span class="social"><a id="twitterb" href="3">u</a> <a id="facebookb" href="3">f</a> <a id="googleb" href="3">g</a> <a id="pinterestb" href="3">l</a> <a id="stumbleb" href="3">N</a> <a id="flickrb" href="3">h</a> <a id="wordb" href="3">w</a> <a id="rssb" href="3">r</a></span>
+				    <div class="footer-brand"><a class="brand" href="index.html">Ocean </a> Responsive, Retina Website Template</div> 
+				</div> <!-- End span8 -->
+				<div class="span4 contact-border">
+					<form action="/" class="validate" target="_blank">
+						<h4>Contact Us:</h4>
+						<input type="text" size="25" maxlength="255" placeholder="Full Name" value="">
+						<br>
+						<input type="email" size="25" maxlength="255" placeholder="Email" value="">
+						<br>     
+						<textarea rows="5" placeholder="Message"></textarea>
+						<br>
+						<input type="submit" class="default-btn" name="submit" value="Send Message">     
+					</form>
+				</div> <!-- End span4 -->
+			</div> <!-- End Row -->
+		</div> <!-- End container -->
+	</footer> <!-- End footer -->
+</body>
+</html>

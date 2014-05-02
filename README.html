@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+    <title>Ocean Documentation</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all"/>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,700italic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.layout.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
+
+    <style type="text/css">
+
+      /****************************
+      *
+      *   _-=/| README |\=-_ 
+      *
+      * by: Bryan McAnulty
+      * Available on: Themeforest
+      *
+      * Copyright 2012, Bryan McAnulty
+      *
+      ****************************/
+
+      /***------ @BASE STYLES ------***/
+
+      html {
+        background: #ccc;
+      }
+        body {
+          font-family: "Lato", arial, sans-serif;
+          font-size: 14px;
+          background: #888;
+          color: #333333;
+        }
+        
+      /***------ @INTERFACE FRAME------***/
+
+      .ui-layout-pane { /* all 'panes' */ 
+        background: #FFF; 
+        border: 1px solid #BBB; 
+        padding: 10px; 
+        overflow: auto;
+      } 
+      .ui-layout-resizer { /* all 'resizer-bars' */ 
+        background: #222; 
+      } 
+      .ui-layout-toggler { /* all 'toggler-buttons' */ 
+        background: #000; 
+      }
+      .ui-layout-west{
+        background-color: #272727;
+        border: 1px solid #000;
+        border-right: 1px solid #333;
+        color: #ccc;
+        overflow: hidden;
+        z-index: 4 !important;
+      }
+      .ui-layout-pane-west{
+        padding: 0;
+      }
+      .ui-layout-west h4{
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 13px;
+      }
+      .ui-layout-west ul{
+        font-size: 12px;
+        font-weight: 400;
+      }
+      .ui-layout-west li{
+        font-weight: 400;
+      }
+      .ui-layout-east{
+        margin: 0;
+        padding: 0;
+        background-color: #272727;
+        border: 1px solid #000;
+        border-right: 1px solid #333;
+        color: #ccc;
+        overflow: hidden;
+        z-index: 4 !important;
+      }
+      .ui-layout-center{
+        padding: 0;
+        border: none;
+        overflow: hidden;
+        background: #eee;
+        -webkit-box-shadow: inset 0px 0px 2px #888;
+        -moz-box-shadow: inset 0px 0px 2px #888;
+        box-shadow: inset 0px 0px 2px #888;
+      }
+      .ui-layout-content{
+        overflow: auto;
+      }
+      .ui-layout-pane-center{
+        padding: 0;
+        border-bottom: none;
+        background-color: #eee;
+      }
+
+      .ui-layout-center #view-holder{
+        padding: 20px;
+      }
+      .ui-layout-west{
+        background: #ddd;
+        border: none;
+      }
+      .ui-layout-west ul li{
+        list-style: none;
+      }
+      .ui-layout-west ul li p{
+        font-size: 14px;
+        line-height: 22px;
+      }
+      .ui-layout-resizer { /* all 'resizer-bars' */ 
+        background: #ccc; 
+      } 
+
+      .ui-layout-toggler { /* all 'toggler-buttons' */ 
+        background: #777; 
+      } 
+      h1{
+        border-bottom: 1px solid #ccc;
+        padding: 15px 0;
+        margin: 15px 0;
+        color: #555;
+      }
+      .docTitle{
+        font-size: 40px;
+        color: #333;
+      }
+      small{
+        color: #777;
+        font-size: 13px;
+        font-style: italic;
+        background: #f8f8f8;
+        padding: 10px;
+        line-height: 20px;
+        margin: 15px 0;
+        display: block;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      }
+
+    </style>
+
+    <script>
+     // jQuery UI Layout Below
+            
+        // set EVERY 'state' here so will undo ALL layout changes
+        // used by the 'Reset State' button: myLayout.loadState( stateResetSettings )
+        var stateResetSettings = {
+                north__size:        0
+            ,   north__initClosed:  true
+            ,   north__initHidden:  true
+            ,   south__size:        "auto"
+            ,   south__initClosed:  true
+            ,   resizeWhileDragging: true
+            ,   south__initHidden:  true
+            ,   west__size:         250
+            ,   west__initClosed:   false
+            ,   west__initHidden:   false
+            ,   east__size:         0
+            ,   east__initClosed:   true
+            ,   east__initHidden:   true
+        };
+    
+        var myLayout;
+    
+        $(document).ready(function () {
+    
+            // this layout could be created with NO OPTIONS - but showing some here just as a sample...
+            // myLayout = $('body').layout(); -- syntax with No Options
+    
+            myLayout = $('body').layout({
+    
+            //  enable showOverflow on west-pane so CSS popups will overlap north pane
+                west__showOverflowOnHover: false
+    
+            //  reference only - these options are NOT required because 'true' is the default
+            ,   closable:               true    // pane can open & close
+            ,   resizable:              true    // when open, pane can be resized 
+            ,   slidable:               true    // when closed, pane can 'slide' open over other panes - closes on mouse-out
+    
+            //  some resizing/toggling settings
+            ,   north__slidable:        false   // OVERRIDE the pane-default of 'slidable=true'
+            ,   south__resizable:       false   // OVERRIDE the pane-default of 'resizable=true'
+            ,   north__resizable:       false   // OVERRIDE the pane-default of 'resizable=true'
+            ,   north__initClosed:      true
+            ,   north__initHidden:      true
+            ,   north__size:            0  // OVERRIDE the pane-default of 'resizable=true'
+            ,   south__size:            0   // OVERRIDE the pane-default of 'resizable=true'
+            ,   south__spacing_open:    0       // no resizer-bar when open (zero height)
+            ,   north__spacing_open:    0       // no resizer-bar when open (zero height)
+            ,   south__spacing_closed:  0       // big resizer-bar when open (zero height)
+            ,   east__initClosed:       true
+            ,   east__initHidden:       true
+            ,   west__initClosed:       false
+            ,   south__initClosed:      true
+            ,   resizeWhileDragging: true
+            //  some pane-size settings
+            ,   west__minSize:          190
+            ,   west__size:             250
+            ,   west__resizable:        true
+            ,   east__size:             0
+            ,   east__minSize:          0
+            ,   east__maxSize:          Math.floor(screen.availWidth / 2) // 1/2 screen width
+            ,   center__minWidth:       100
+    
+            ,   useStateCookie:         false
+            });            
+    
+        });
+      </script>
+   
+  </head>
+  <body onload="prettyPrint()">
+
+    <div class="ui-layout-north">
+    	
+    </div>
+    
+    <div class="ui-layout-west"> 
+      <div style="color:#333;padding:20px; height:20px;font-size:18px;">
+        <strong>Contents:</strong>
+      </div>
+      <ul>
+          <a href="#installation"><li>
+            <p>Basic Intallation </p>
+          </li></a>
+          <a href="#css"><li>
+            <p>Navigating CSS </p>
+          </li></a>
+          <a href="#responsiveDesign"><li>
+            <p>Responsive Design </p>
+          </li></a>
+          <a href="#classes"><li>
+            <p>Important Classes </p>
+          </li></a>
+          <a href="#buttons"><li>
+            <p>Buttons </p>
+          </li></a>
+          <a href="#bootstrap"><li>
+            <p>Bootstrap </p>
+          </li></a>
+          <a href="#icons"><li>
+            <p>Retina Web Font Icons </p>
+          </li></a>
+          <a href="#sliders"><li>
+            <p>Javascript Sliders </p>
+          </li></a>
+          <a href="#lightbox"><li>
+            <p>Lightbox &amp; Portfolio </p>
+          </li></a>
+          <a href="#maps"><li>
+            <p>Google Maps </p>
+          </li></a>
+          <a href="#subscribe"><li>
+            <p>Mailchimp Subscribe Form </p>
+          </li></a>
+          <a href="#twitter"><li>
+            <p>Twitter Feed</p>
+          </li></a>
+          <a href="#plugins"><li>
+            <p>Plugin Documentation </p>
+          </li></a>
+          <a href="#release"><li>
+            <p>Release Notes </p>
+          </li></a>
+          <a href="#support"><li>
+            <p>Support </p>
+          </li></a>
+      </ul>
+    <ul>
+
+    </ul>   
+
+    </div> <!-- END Layout West -->
+    
+    <div class="ui-layout-south footer">
+    	
+    </div> <!-- END Layout South -->
+    
+    <div class="ui-layout-east">      
+    
+    </div> <!-- END Layout East -->
+    	    	
+	<div class="ui-layout-center">
+    <div id="view-holder" class="ui-layout-content">
+        <h1 class="docTitle">OCEAN DOCUMENTATION</h1>
+
+      <section id="installation">
+        <h1>Basic Installation</h1>
+        <p>To get this template running on your own server upload the contents of the folder to the root of your webserver.</p>
+        <p>Take a look at the included page templates to get an idea of what is possible and how you'd like to configure your website. The instructions below will guide you through setting up your own preferred layout.</p>
+      </section>
+
+      <section id="css">
+        <h1>Navigating CSS</h1>
+        <p>Sections in the <strong>style.css</strong> file have headings to make searching the file easy. Throughout this documentation there are references to different sections that you can search for the document's header to find. Examples are @BUTTONS, @STRUCTURE, @MODIFIED BOOTSTRAP, @SIDEBAR, etc.</p>
+        <p>Below is every section in <strong>style.css</strong> listed in order: </p>
+          <ul>
+            <li>@BASE STYLES</li>
+            <li>@STRUCTURE</li>
+            <li>@NAVBAR</li>
+            <li>@HOMEPAGE HERO</li>
+            <li>@HOMEPAGES</li>
+            <li>@SIDEBAR</li>
+            <li>@BLOG</li>
+            <li>@COMMENTS</li>
+            <li>@PORTFOLIO</li>
+            <li>@CONTENT</li>
+            <li>@ABOUT</li>
+            <li>@VIDEO</li>
+            <li>@STORE ITEMS</li>
+            <li>@PRICING</li>
+            <li>@BUTTONS</li>
+            <li>@BUTTON COLORS</li>
+            <li>@BUTTON SIZES</li>
+            <li>@BUTTON OPTIONS</li>
+            <li>@ERROR PAGES</li>
+            <li>@RESPONSIVE ERROR PAGE STRUCTURE</li>
+            <li>@FAQ PAGE</li>
+            <li>@TESTIMONIALS PAGE</li>
+            <li>@TEAM PAGE</li>
+            <li>@CONTACT PAGE</li>
+            <li>@GOOGLE MAPS</li>
+            <li>@FOOTER</li>
+            <li>@MODIFIED BOOTSTRAP</li>
+            <li>@RESPONSIVE STRUCTURE</li>
+          </ul>
+        <p><small>Note: the bootstrap.css file has not been modified to make upgrading easy. Best practice is to keep any additional modifications to Bootstrap's CSS under the @MODIFIED BOOTSTRAP section in <strong>style.css</strong></small></p>    
+      </section>
+
+      <section id="responsiveDesign">
+        <h1>Responsive Design</h1>
+        <p>Bootstrap is providing some of the responsive structure for this design, mainly the fluid collumns. The bottom of the <strong>style.css</strong> file holds additional modications to make this interface function the way it does.</p>
+        <p>The footer area of this template uses a lot of custom CSS for it's responsive structure. Each page of this template is responsive and will adjust to fit desktops, laptops, iPhones, iPads, Android phones and tablets and more.</p>
+        <p>If you are new to responsive design there are two important things to remember when making adjustments to this theme.</p>
+        <ol>
+          <li>Be careful when modifying a style, to make sure that you check if it is appearing later in the document under a media query, as you may need to modify it there as well. Forgetting to do this can result in unexpected breaking of your designs layout when activating media queries. It is always easier to do this as you go rather than trying to remember each modififcation later.</li>
+          <li>There are window based media queries and device width based media queries. Some media queries target a specific device only, such as the media query for an iPad in portrait position with device widths. When you resize your browser window this media query will not be activated because it only applies to a device with matching screen dimensions. To test modifications to this in a browser you can temporarily change the media query from "min-device-width" to "min-width".</li>
+        </ol>
+      </section>
+
+      <section id="classes">
+        <h1>Important Classes</h1>
+        <p>When searching for a part of the template that you would like to edit or implement, remember firebug and the web inspector can help you find the ids and classes you need quickly. If you are not familiar with Bootstrap's layout scaffolding, take a look here first: <a href="http://twitter.github.com/bootstrap/scaffolding.html#layouts">http://twitter.github.com/bootstrap/scaffolding.html#layouts</a></p>
+        <p>Here are a few custom classes you will probably be working with often and what they do:</p>
+        <ul>
+          <li><strong>.border-row</strong>: Applies a border, shadow and light background to a container. Can be applied to any container with that already has a span class or row-fluid class. This styling is present on many areas of the template. An example is the content of the FAQ page. Its light background and border box come from the .border-row class.</li>
+          <li><strong>.dark-row</strong>: Applies a dark transparent gradient to a container. Can be applied to any container with that already has a span class or row-fluid class. You can find an example of this class in action at the icon feature area under the testimonial slider in index.html</li>
+          <li><strong>.standout</strong>: Applied to a row-fluid container to create a block of text that catches the eye. See the example text directly under the slider on home2.html.</li>
+          <li><strong>.img-circle</strong>: uses border-radius to create a circle image. Apply to any img tag as a class.</li>
+          <li><strong>.home-action</strong>: Creates a contrasting call to action block. Apply to any span class to set it's width. The "get started today" text just before the footer on home2.html uses this style.</li>
+          <li><strong>.padding-left</strong>: when creating a multi-column layout inside a .border-row class container as described above, you may wish to add some padding around your content. Apply this class to add left spacing.</li>
+          <li><strong>.padding-right</strong>: reverse of padding-left. Apply to containers with the class border-row.</li>
+          <li><strong>.padding-both</strong>: Same as above, but applies padding to both sides.</li>
+          <li><strong>.sidebar-section</strong>: creates a container in your sidebar with padding and a dividing border below. See any template with a sidebar for an example.</li>
+          <li><strong>.blog-box</strong>: creates a styled container for an individual blog post. Can be used for post previews and for entire posts.</li>
+        </ul>
+      </section>
+
+      <section id="buttons">
+        <h1>Buttons</h1>
+        <p>This theme includes a variety of custom designed CSS3 buttons. Implementing them is easy. Simply create an anchor element with the class "btn". <pre class="prettyprint
+     linenums">&lt;a href="#" class="default-btn"&gt;Normal&lt;/a&gt;</pre></p>
+        <p> Adding the class .small-btn .large-btn .xlarge-btn or .xxl-btn will change the button size.<p>
+        <p>Adding the color class next to the button will change the button color. For example: .default-btn is a standard blue button. Adding the .pink-btn class in addition will make the button turn pink. </p>
+        <p>To find all the button classes in <strong>style.css</strong>, search for @BUTTONS.</p>
+        <p><small>Note: Bootstrap's button styles are preserved and still available for use as well. See buttons.html for a display of all button options.</small></p>
+      </section>
+
+      <section id="bootstrap">
+        <h1>Bootstrap</h1>
+        <p>This theme uses Twitter's Bootstrap for some default styling, javascript plugins and easy customization. In the bottom of the <strong>style.css</strong> stylesheet there is a section with modifications to overide and customize some of Bootstrap's default styling. Search @MODIFIED BOOTSTRAP in <strong>style.css</strong> to find it. See the Bootstrap documentation for help with implementing additional features from it. If you are having trouble or have a question remember you can <a href="#support">contact</a> us!</p>
+      </section>
+
+      <section id="icons">
+        <h1>Retina Web Font Icons</h1>
+        <p>This theme includes multiple sets of web font icons. These icons are compatible with all browsers down to IE7. The main set includes all of the icons you would typically find in Twitter's Bootstrap, converted into web font icons. They are implemented the same way you would implement an icon in Boostrap and all the class names are the same.</p>
+        <p>The Font Awesome Icons use a Creative Commons license and the author requires that you leave the comment above the CSS like this: <pre class="prettyprint
+     linenums">&lt;!-- Retina Webfont for Boostrap from Font Awesome - http://fortawesome.github.com/Font-Awesome --&gt;</pre></p>
+        <p>Besides looking great on retina displays, webfont icons can have their color set in CSS like any other font. You can also apply effects like text-shadows and transitions.</p>
+        <p>Also included is a social icon font set called WLM (see link below for source). WLM social icons are used for the icons in the footer of this template.</p>
+        <p>Icon source files are located in the "/fonts" folder. Learn more about each icon set at the links below.</p>
+        <ul>
+          <li><a href="http://fortawesome.github.com/Font-Awesome/">http://fortawesome.github.com/Font-Awesome/</a></li>
+          <li><a href="http://www.fontspace.com/wlm-fonts/wlm-web-iconized">http://www.fontspace.com/wlm-fonts/wlm-web-iconized</a></li>
+        </ul>
+      </section>
+
+      <section id="sliders">
+        <h1>Javascript Sliders</h1>
+        <p>The sliders used in this theme are carousels from Bootstrap with a couple additions. To achieve the same style as the main slider on index.html you'll need to give your slider an id of <strong>#myCarousel</strong>. To create a slider like the testimonial slider on testimonials.html you will need to give your slider an id of <strong>#TestimonialSlide.</strong></p>
+        <p>The <strong>#myCarousel</strong> homepage slider can be set to multiple widths as shown on home2.html where it fills half of the page width. Each slide can include a caption and an additional large text option has been added.</p>
+        <p>To see an example of how to add the large text over an image look at line 188 in index.html. Below is a code sample for large captions.</p>
+        <pre class="prettyprint
+     linenums">&lt;div class=&quot;slider-hero-text hidden-phone&quot;&gt;
+  &lt;h2&gt;A Responsive Retina Ready Theme&lt;/h2&gt;
+  &lt;p&gt;36 Page Templates Included!&lt;/p&gt;
+&lt;/div&gt;</pre>
+        <p>Bootstrap's sliders are responsive, and both of these custom styles work great at any viewport size. Learn more about these sliders from Bootstrap's documentation: <a href="http://twitter.github.com/bootstrap/javascript.html#carousel">http://twitter.github.com/bootstrap/javascript.html#carousel</a></p>
+        <p><small>Note: The large text captions shown above are hidden on smartphones so the slider image is not covered. To include captions on smartphones use the regular image captions. See index.html starting at line 183 for an example.</small></p>
+      </section>
+
+      <section id="lightbox">
+        <h1>Lightbox and Portfolio Setup</h1>
+        <p>This theme includes 5 portfolio page templates. Image captions for these pages have 4 optional animated CSS3 hover effects. Clicking on any of these images triggers a lightbox effect to view a larger image.</p>
+        
+        <h3>Setting Up your Portfolio</h3>
+        <p>A portfolio image can be as small as a .span3 column or as large as a .span12 single column. Images widths can be mixed as seen on the gallery.html template. The only adjustment needed when creating an image as wide as a .span6 column or wider is that the ".wide" class should be appended after the .portfolio-box class to center the image properly when it is made narrow.</p>
+        <p>The figure tag (lines 3-10 in the code below) contains the portfolio image and its caption.</p>
+        <p>To adjust the animation effect all you need to do is change the class after .portfolio-box on line 3. The code below is set to the .slide-top animation. There are four different animation classes. Experiment with them and choose the one you like or even alternate them.</p>
+        <ul>
+          <li>.slide-top</li>
+          <li>.slide-right</li>
+          <li>.fall-in</li>
+          <li>.fade-in</li>
+        </ul>
+        <p>Set your image on line 5. Then change the h4 and p contents in figcaption to set your title and description for each portfolio item. This is shown in lines 7 and 8 below.</p>
+        <pre class="prettyprint
+     linenums">&lt;div class=&quot;span4&quot;&gt;
+  &lt;a class=&quot;lightbox-link&quot; data-toggle=&quot;lightbox&quot; href=&quot;#box1&quot;&gt;
+  &lt;figure class=&quot;portfolio-box slide-top&quot;&gt;
+    &lt;i class=&quot;icon-info-sign&quot;&gt;&lt;/i&gt; 
+      &lt;img src=&quot;images/port1.jpg&quot; alt=&quot;&quot; /&gt;
+      &lt;figcaption class=&quot;portfolio-details&quot;&gt;
+          &lt;h4&gt;Portfolio Item Header&lt;/h4&gt;
+          &lt;p&gt;Description of Portfolio Item. How it was made. Who it was made for.&lt;/p&gt;
+      &lt;/figcaption&gt;                     
+  &lt;/figure&gt;
+  &lt;/a&gt;
+  &lt;div class=&quot;lightbox fade&quot; id=&quot;box1&quot; style=&quot;display: none;&quot;&gt;
+    &lt;div class='lightbox-content'&gt;
+      &lt;img src=&quot;images/port1.jpg&quot; alt=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;&lt;!-- End portfolio item span column --&gt;</pre>
+        <h3>Setting up the Lightbox</h3>
+        <p>To make sure your lightbox functions correctly you'll need to set the right image paths. No additional javascript needed since it is referenced via data-attributes in the anchor tag. The lightbox code is shown above and can be seen in lines 12-16 (the image that will appear and is hidden by default), and the anchor tag on line 3 to trigger the lightbox.</p>
+        <p>First, adjust the id of the div on line 11 in the code above. Then adjust the image url to the same image you reference in line 5 for your portfolio item. Now adjust the href to the same id that you set for the div on line 11. This anchor tag is the trigger for your lightbox.</p>
+      </section>
+
+      <section id="maps">
+        <h1>Google Maps</h1>
+        <p>To adjust Google Maps to your business' location you will need to change the lat and long coordinates in two lines of code. Both lines are shown below. Open contact.html and the first line can be found on at line 30. The second line shown is line 108. The first line sets the map center and the second sets the map marker position.</p>
+        <pre class="prettyprint
+     linenums">var monterey = new google.maps.LatLng(39.95227, -75.1636);</pre>
+        <pre class="prettyprint
+     linenums">var markerPos = new google.maps.LatLng(39.95227, -75.1636);</pre>
+        <p>Find the general documentation on the Google Maps API here: <a href="https://developers.google.com/maps/documentation/javascript/">https://developers.google.com/maps/documentation/javascript/</a>. If you have an adwords account you can configure this map to display ads. See this page for more info: <a href="https://developers.google.com/maps/documentation/javascript/advertising">https://developers.google.com/maps/documentation/javascript/advertising</a></p>
+        <p>This theme uses a customized theme for google maps. Visiting <a href="http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html">http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html</a> will allow you to customize your own map colors.</p>
+      </section>
+
+      <section id="subscribe">
+        <h1>Mailchimp Subscribe Form</h1>
+        <p>The footer of this template has a AJAX email subscribe form with validation. Learn how to configure it for your mail list below. If you do not have a mailchimp account you can signup for free at http://mailchimp.com.</p>
+        <ul>
+          <li>Create a new email list and an email form.</li>
+          <li>Give the form a name field and an email field. Save the form.</li>
+          <li>In the form builder you will see a tab near the top that says "Share It". Click this tab.</li>
+          <li>Next click the "Create HTML code for a small subscription form" button on the right side.</li>
+          <li>Now scroll to the code section at the bottom right and we will need to copy a few small parts to replace in the index.html file of your theme.</li>
+        </ul>
+        <p>Copy the code near the top in between the quotes of &lt;form action="">. It will look something like this, but you only need to copy what is in the quotes:</p>
+        <pre class="prettyprint
+     linenums">&lt;form action="http://velorastudios.us5.list-manage.com/subscribe/post?u=3eb59c0744a850c1b1cab4c95&amp;id=a65e7f5a53"&gt;</pre>
+
+        <p>Paste that code in between the quotes of form action="" in the index.html file of the template replacing the old action. Next scroll down to the javascript in the code (about halfway down) on the mailchimp embed code and copy the URL in between the quotes after you see options = { url: ''}</p>
+        <p>It will look like this:</p>
+        <pre class="prettyprint
+           linenums">options = { url: 'http://velorastudios.us5.list-manage2.com/subscribe/post-json?u=3eb59c0744a850c1b1cab4c95&id=a65e7f5a53&c=?',</pre>
+
+        <p>Paste that url in the same area in between the quotes on the index.html file. Save the index.html file of the theme.</p>
+
+        <p>Try out the form to make sure it works and you are all ready to go!</p>
+      </section>
+
+      <section id="twitter">
+        <h1>Twitter Feed Widget</h1>
+        <p>You can insert a widget with your twitter feed on any page template included in this theme. A sidebar or contact area are great places for one.</p>
+        <p>To change the twitter feed to your own, all you need to do is change the twitter handle in the code snippet below. The snippet is setup to display tweets from VeloraStudios. Simply find and replace to change out the three times VeloraStudios appears, and replace it with your twitter username instead.</p>
+        <p>Lastly, if you would like to change the number of tweets displayed, simply adjust the number at the end of line 6 after "count=". The code below is set to display 5 recent tweets.</p>
+
+<pre class="prettyprint
+linenums">&lt;div class="twitter"&gt;
+  &lt;h3&gt;&lt;i class="icon-retweet"&gt;&lt;/i&gt; Latest Tweets&lt;/h3&gt;
+    &lt;div id="twitter_update_list"&gt;
+    &lt;/div&gt;
+    &lt;script type="text/javascript" src="js/blogger.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="http://api.twitter.com/1/statuses/user_timeline/VeloraStudios.json?callback=twitterCallback2&amp;count=5"&gt;&lt;/script&gt;
+    &lt;p class="follow"&gt;&lt;a href="http://twitter.com/VeloraStudios"&gt;Follow @VeloraStudios!&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;!-- end twitter --&gt;</pre>
+
+      </section>
+
+      <section id="plugins">
+        <h1>Plugin Documentation</h1>
+        <p>Find additional documentation for the included plugins at the links below:</p>
+        <ul>
+          <li>Bootstrap: Used for it's default styling, responsive columns, icons and plugins (dropdowns, tabs, tooltips, alerts, modals, etc.) <a href="http://twitter.github.com/bootstrap/index.html">http://twitter.github.com/bootstrap/index.html</a></li>
+          <li>jQuery: jQuery <a href="http://jquery.com/">http://jquery.com/</a></li>
+          <li>Bootstrap Lightbox: Lightbox addition to bootstrap built off its modal boxes <a href="http://jbutz.github.com/bootstrap-lightbox/">http://jbutz.github.com/bootstrap-lightbox/</a></li>
+          <li>Google Maps Custom Style: Custom theme for google maps. Customize your own. <a href="http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html">http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html</a></li>
+          <li>Google Fonts: Open source font collection. <a href="http://www.google.com/webfonts/">http://www.google.com/webfonts/</a></li>
+        </ul>
+      </section>
+
+      <section id="release">
+        <h1>Release Notes</h1>
+        <p><strong>Version 1.0 - Initial Release</strong></p>
+        <p>More features and enhancements coming! Contact us with requests or if you believe you have found a bug.</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </section>
+
+      <section id="support">
+        <h1>Support</h1>
+        <p>Need More Help? Have a feature request for a theme? Contact me on Themeforest at:</p>
+        <p><a href="http://themeforest.net/user/BryanMcAnulty">http://themeforest.net/user/BryanMcAnulty</a></p>
+        <p>Thanks for purchasing this file!</p>
+        <p><strong>Bryan McAnulty</strong></p>
+        <br>
+        <br>
+        <br>
+        <p style="color:#666;">Copyright 2012, Bryan McAnulty</p>
+      </section>
+
+    </div>
+        
+	</div><!-- END Layout Center -->
+
+</body>
+</html>

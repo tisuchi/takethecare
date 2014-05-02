@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Ocean: Responsive, Retina Website Template</title>
+
+	<meta name="description" content="ADD A DESCRIPTION!!!" />
+	<meta name="keywords" content="ADD KEYWORDS!!!"  />
+	<meta name="author" content="http://themeforest.net/user/BryanMcAnulty" />
+	<meta name="dcterms.rightsHolder" content="Copyright Bryan McAnulty 2012. All Rights Reserved." />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all"/>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all"/>
+
+	<!-- Retina Webfont for Boostrap from Font Awesome - http://fortawesome.github.com/Font-Awesome -->
+	<link rel='stylesheet' type='text/css' href='css/font-awesome.css' />
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,700italic' rel='stylesheet' type='text/css'>
+
+	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-lightbox.js"></script>
+
+	<script type="text/javascript">
+		// Bootstrap Tooltips
+		$(document).ready(function () {
+			$('#twitterb').tooltip({
+				placement : 'bottom',
+				title : 'Twitter'
+			});
+			$('#facebookb').tooltip({
+				placement : 'bottom',
+				title : 'Facebook'
+			});
+			$('#googleb').tooltip({
+				placement : 'bottom',
+				title : 'Google+'
+			});
+			$('#pinterestb').tooltip({
+				placement : 'bottom',
+				title : 'Pinterest'
+			});
+			$('#flickrb').tooltip({
+				placement : 'bottom',
+				title : 'Flickr'
+			});
+			$('#rssb').tooltip({
+				placement : 'bottom',
+				title : 'RSS'
+			});
+			$('#wordb').tooltip({
+				placement : 'bottom',
+				title : 'Wordpress'
+			});
+			$('#stumbleb').tooltip({
+				placement : 'bottom',
+				title : 'Stumbleupon'
+			});
+		});
+	</script> 
+</head>
+<body>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>    
+				<a class="brand" href="index.html">Ocean</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li class="divider-vertical"></li> <!-- Nav Divider -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="icon-home"></i> Home
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="index.html">Full Slider Home 1</a></li>
+								<li><a href="home2.html">Side Slider Home 2</a></li>
+								<li><a href="home3.html">Hero Text Home 3</a></li>
+							</ul>
+						</li>
+						<li class="divider-vertical"></li> <!-- Nav Divider -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="icon-file"></i> Pages
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">Portfolios</a>
+									<ul class="dropdown-menu">
+										<li><a href="portfolio1.html">1 Column</a></li>
+										<li><a href="portfolio2.html" class="hidden-phone">2 Column</a></li>
+										<li><a href="portfolio3.html" class="hidden-phone">3 Column</a></li>
+										<li><a href="portfolio4.html" class="visible-desktop">4 Column</a></li>
+										<li><a href="gallery.html">Gallery</a></li>
+									</ul>
+								</li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">Content Pages</a>
+									<ul class="dropdown-menu">
+										<li><a href="content-right.html" class="hidden-phone">Left Sidebar</a></li>
+										<li><a href="content-left.html">Right Sidebar</a></li>
+										<li><a href="content-two-sidebars.html" class="hidden-phone">Two Sidebars</a></li>
+										<li><a href="content.html">No Sidebar</a></li>
+									</ul>
+								</li>
+								<li><a href="team.html">Team</a></li>
+								<li><a href="video.html">Video Page</a></li>
+								<li><a href="faq.html">FAQ</a></li>
+								<li><a href="typography.html" class="visible-desktop">Typography</a></li>
+								<li><a href="testimonials.html">Testimonials</a></li>
+								<li class="dropdown-submenu visible-desktop">
+									<a tabindex="-1" href="#" class="visible-desktop">Error Pages</a>
+									<ul class="dropdown-menu">
+										<li><a href="400.html">400</a></li>
+										<li><a href="401.html">401</a></li>
+										<li><a href="403.html">403</a></li>
+										<li><a href="404.html">404</a></li>
+										<li><a href="500.html">500</a></li>
+										<li><a href="503.html">503</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="divider-vertical"></li> <!-- Nav Divider -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="icon-pencil"></i> Blog
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="blog-left.html">Right Sidebar</a></li>
+								<li><a href="blog-right.html" class="hidden-phone">Left Sidebar</a></li>
+								<li><a href="blog-two-sidebars.html" class="hidden-phone">Two Sidebars</a></li>
+								<li><a href="blog-narrow.html" class="hidden-phone">Narrow Sidebar</a></li>
+								<li><a href="blog-post-detail.html">Detail Post Page</a></li>
+								<li><a href="blog-image-left.html" class="visible-desktop">Left Image Style</a></li>
+								<li><a href="blog-full.html" class="hidden-phone">Full Width</a></li>	  			            
+								<li><a href="blog-no-box.html">No Box Style Posts</a></li>
+							</ul>
+						</li>
+						<li class="divider-vertical"></li> <!-- Nav Divider -->
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="icon-star"></i> Features
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="widgets.html">Widgets</a></li>
+								<li><a href="pricing.html">Pricing</a></li>
+								<li><a href="buttons.html">Buttons</a></li>
+								<li><a href="store.html">Store Layout</a></li>
+							</ul>
+						</li>
+						<li class="divider-vertical"></li> <!-- Nav Divider -->
+						<li><a href="contact.html"><i class="icon-envelope"></i> Contact</a></li>
+						<li class="divider-vertical"></li>
+					</ul>
+					<form class="navbar-search pull-right">
+						<i class="icon-search"></i><input type="text" class="search-query" placeholder="Search">
+					</form>
+				</div> <!-- End nav-collapse -->
+			</div> <!-- End container -->
+		</div> <!-- End navbar-inner -->
+	</div> <!-- End navbar -->
+	
+	<div class="container-fluid">
+		<header>
+			<h1 class="site-logo"><a href="index.html">Ocean</a></h1>
+			<p>A Responsive Retina Ready Theme from <strong>Bryan McAnulty</strong></p>
+		</header> <!-- End Header -->
+		  
+		  <h1 class="page-header">Buttons:</h1>
+		  	  	  	  	        
+	  	        <div class="row-fluid button-row">
+	  	          <div class="span12">
+	  	            <h2><i class="icon-ok-sign"></i> Custom Button Colors: <small>All CSS3, create with a single anchor tag.</small></h2>
+	  	              <p>7 Button Colors and a disabled state. Dimensional CSS3 buttons that gracefully degrade in older browsers.</p>
+	  	              <a href="#" class="default-btn">Blue</a>
+	  	              <a href="#" class="default-btn purple-btn">Purple</a>
+	  	              <a href="#" class="default-btn pink-btn">Pink</a>
+	  	              <a href="#" class="default-btn red-btn">Red</a>
+	  	              <a href="#" class="default-btn orange-btn">Orange</a>
+	  	              <a href="#" class="default-btn yellow-btn">Yellow</a>
+	  	              <a href="#" class="default-btn green-btn">Green</a>
+	  	              <a href="#" class="default-btn disabled-btn">Disabled</a>
+	  	          </div>
+	  	        </div> <!-- End Row -->
+	  	        
+	  	          <div class="row-fluid button-row">
+	  	            <div class="span12">
+	  	              <h2><i class="icon-ok-sign"></i> Custom Button Sizes: <small>Adjust size by simply adding a class.</small></h2>	  	              
+	  	                <p>Easily apply buttons with one anchor tag. Change sizes and colors by adding a class.</p>
+	  	                <br>
+	  	                <p>
+		  	                <a href="#" class="default-btn small-btn">Small</a>
+		  	                <a href="#" class="default-btn">Normal</a>
+		  	                <a href="#" class="default-btn large-btn">Large</a>
+		  	                <a href="#" class="default-btn xlarge-btn">Extra Large</a>
+		  	                <a href="#" class="default-btn xxl-btn">XXL Extreme</a>
+	  	                </p>
+	  	                <br>
+	  	                <p>
+		  	                <a href="#" class="default-btn small-btn pink-btn">Small</a>
+		  	                <a href="#" class="default-btn pink-btn">Normal</a>
+		  	                <a href="#" class="default-btn large-btn pink-btn">Large</a>
+		  	                <a href="#" class="default-btn xlarge-btn pink-btn">Extra Large</a>
+		  	                <a href="#" class="default-btn xxl-btn pink-btn">XXL Extreme</a>
+	  	                </p>
+	  	                <br>
+	  	                <p>
+		  	                <a href="#" class="default-btn small-btn orange-btn">Small</a>
+		  	                <a href="#" class="default-btn orange-btn">Normal</a>
+		  	                <a href="#" class="default-btn large-btn orange-btn">Large</a>
+		  	                <a href="#" class="default-btn xlarge-btn orange-btn">Extra Large</a>
+		  	                <a href="#" class="default-btn xxl-btn orange-btn">XXL Extreme</a>	  	              
+	  	            	</p>
+	  	            </div>
+	  	          </div> <!-- End Row -->
+	  	        
+	  	          <div class="row-fluid button-row">
+	  	            <div class="span12">
+	  	              <h2><i class="icon-exclamation-sign"></i> Retina Icon Buttons:</h2>	  	              
+	  	                <p>Over 200 Retina Icon Font Icons Included! Scale icons to any size, set to any color, apply text shadows and transitions!</p>
+	  	                <a href="#" class="default-btn"><i class="icon-edit"></i> Edit</a>
+	  	                <a href="#" class="default-btn purple-btn"><i class="icon-user"></i> New User</a>
+	  	                <a href="#" class="default-btn pink-btn"><i class="icon-info-sign"></i> Information</a>
+	  	                <a href="#" class="default-btn red-btn"><i class="icon-trash"></i> Delete</a>
+	  	                <a href="#" class="default-btn orange-btn"><i class="icon-play"> </i> Play</a>
+	  	                <a href="#" class="default-btn yellow-btn"><i class="icon-tag"></i> Add Tag</a>
+	  	                <a href="#" class="default-btn green-btn"><i class="icon-heart"></i> Favorite</a>
+	  	                <a href="#" class="default-btn disabled-btn"><i class="icon-thumbs-up"></i> Like</a>	  	              
+	  	            </div>
+	  	          </div> <!-- End Row -->
+	  	        	  	        
+	  	          <div class="row-fluid button-row">
+	  	            <div class="span12">
+	  	              <h2><i class="icon-plus-sign"></i> Button Options:</h2>	  	             
+	  	                <p>Extra rounded, half rounded or rectangle.</p>
+	  	                <div class="span3">
+	  	                  <a href="#" class="default-btn round-btn small-btn">Small</a>
+	  	                  <a href="#" class="default-btn orange-btn half-btn small-btn">Small</a>
+	  	                  <a href="#" class="default-btn pink-btn no-radius small-btn">Small</a>
+	  	                </div>
+	  	                <div class="span4">
+	  	                  <a href="#" class="default-btn round-btn">Normal</a>
+	  	                  <a href="#" class="default-btn orange-btn half-btn">Normal</a>
+	  	                  <a href="#" class="default-btn pink-btn no-radius">Normal</a>
+	  	                </div>
+	  	                <div class="span4">
+	  	                  <a href="#" class="default-btn round-btn large-btn">Large</a>
+	  	                  <a href="#" class="default-btn orange-btn half-btn large-btn">Large</a>
+	  	                  <a href="#" class="default-btn pink-btn no-radius large-btn">Large</a>
+	  	                </div>	  	             
+	  	            </div>
+	  	          </div> <!-- End Row -->
+	  	          
+	  	          <div class="row-fluid button-row">
+	  	            <div class="span12">
+	  	            	<h2>Bootstrap Buttons: <small>Regular Bootstrap Buttons Available with their standard classes.</small></h2>
+	  	                  <button type="button" class="btn">Default</button>
+	  	                <button type="button" class="btn btn-primary">Primary</button>
+	  	                <button type="button" class="btn btn-info">Info</button>
+	  	                <button type="button" class="btn btn-success">Success</button>
+	  	                <button type="button" class="btn btn-warning">Warning</button>
+	  	                <button type="button" class="btn btn-danger">Danger</button>
+	  	                <button type="button" class="btn btn-inverse">Inverse</button>
+	  	                <button type="button" class="btn btn-link">Link</button>
+	  	            </div>
+	  	          </div> <!-- End Row -->
+	  	          	        
+	</div> <!-- End container-fluid --> 
+
+	<footer>
+		<div class="container-fluid">
+			<div class="row-fluid footer-border">
+				<div class="span6">
+				   <p>Copyright © 2012 Your Company. All rights reserved.</p>
+				</div>
+				<div class="span6">
+					<div id="footer-menu" class="pull-right">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="blog-right.html">Blog</a></li>
+							<li><a href="portfolio3.html">Portfolio</a></li>
+							<li><a href="team.html">Team</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div> <!-- End Row -->
+			<div class="row-fluid footer-bottom">
+				<div class="span8 footer-subscribe">
+					<h4>Subscribe to Our Newsletter:</h4>
+					<!-- Begin MailChimp Signup Form -->
+					<form action="http://velorastudios.us5.list-manage.com/subscribe/post?u=3eb59c0744a850c1b1cab4c95&amp;id=a65e7f5a53" method="POST" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate subscribe-form" target="_blank">
+						<input type="text" name="MERGE1" id="MERGE1" size="25" maxlength="255" placeholder="Full Name" value="">
+
+						<input type="email" name="MERGE0" id="MERGE0" size="25" maxlength="255" placeholder="Email" value="">     
+
+						<input type="submit" class="default-btn small-btn" name="submit" value="Subscribe">
+
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</form>
+					<script type="text/javascript">
+						var fnames = new Array();var ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';
+						try {
+						  var jqueryLoaded=jQuery;
+						  jqueryLoaded=true;
+						} catch(err) {
+						  var jqueryLoaded=false;
+						}
+						var head= document.getElementsByTagName('head')[0];
+						if (!jqueryLoaded) {
+						  var script = document.createElement('script');
+						  script.type = 'text/javascript';
+						  script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js';
+						  head.appendChild(script);
+						  if (script.readyState && script.onload!==null){
+							  script.onreadystatechange= function () {
+									if (this.readyState == 'complete') mce_preload_check();
+							  }    
+						  }
+						}
+						var script = document.createElement('script');
+						script.type = 'text/javascript';
+						script.src = 'http://downloads.mailchimp.com/js/jquery.form-n-validate.js';
+						head.appendChild(script);
+						var err_style = '';
+						try{
+						  err_style = mc_custom_error_style;
+						} catch(e){
+						  err_style = '#mc_embed_signup input.mce_inline_error{border-color:#6B0505;} #mc_embed_signup div.mce_inline_error{margin: 0 0 1em 0; padding: 5px 10px; background-color:#6B0505; font-weight: bold; z-index: 1; color:#fff;}';
+						}
+						var head= document.getElementsByTagName('head')[0];
+						var style= document.createElement('style');
+						style.type= 'text/css';
+						if (style.styleSheet) {
+						style.styleSheet.cssText = err_style;
+						} else {
+						style.appendChild(document.createTextNode(err_style));
+						}
+						head.appendChild(style);
+						setTimeout('mce_preload_check();', 250);
+
+						var mce_preload_checks = 0;
+						function mce_preload_check(){
+						  if (mce_preload_checks>40) return;
+						  mce_preload_checks++;
+						  try {
+							  var jqueryLoaded=jQuery;
+						  } catch(err) {
+							  setTimeout('mce_preload_check();', 250);
+							  return;
+						  }
+						  try {
+							  var validatorLoaded=jQuery("#fake-form").validate({});
+						  } catch(err) {
+							  setTimeout('mce_preload_check();', 250);
+							  return;
+						  }
+						  mce_init_form();
+						}
+						function mce_init_form(){
+						  jQuery(document).ready( function($) {
+							var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
+							var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
+							$("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
+							options = { url: 'http://velorastudios.us5.list-manage2.com/subscribe/post-json?u=3eb59c0744a850c1b1cab4c95&id=a65e7f5a53&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+										  beforeSubmit: function(){
+											  $('#mce_tmp_error_msg').remove();
+											  $('.datefield','#mc_embed_signup').each(
+												  function(){
+													  var txt = 'filled';
+													  var fields = new Array();
+													  var i = 0;
+													  $(':text', this).each(
+														  function(){
+															  fields[i] = this;
+															  i++;
+														  });
+													  $(':hidden', this).each(
+														  function(){
+															  var bday = false;
+															  if (fields.length == 2){
+																  bday = true;
+																  fields[2] = {'value':1970};//trick birthdays into having years
+															  }
+															if ( fields[0].value=='MM' && fields[1].value=='DD' && (fields[2].value=='YYYY' || (bday && fields[2].value==1970) ) ){
+															  this.value = '';
+											} else if ( fields[0].value=='' && fields[1].value=='' && (fields[2].value=='' || (bday && fields[2].value==1970) ) ){
+															  this.value = '';
+											} else {
+												if (/\[day\]/.test(fields[0].name)){
+																	this.value = fields[1].value+'/'+fields[0].value+'/'+fields[2].value;                         
+												} else {
+																	this.value = fields[0].value+'/'+fields[1].value+'/'+fields[2].value;
+																}
+															}
+														  });
+												  });
+											  return mce_validator.form();
+										  }, 
+										  success: mce_success_cb
+									  };
+							$('#mc-embedded-subscribe-form').ajaxForm(options);
+							
+						  });
+						}
+						function mce_success_cb(resp){
+						  $('#mce-success-response').hide();
+						  $('#mce-error-response').hide();
+						  if (resp.result=="success"){
+							  $('#mce-'+resp.result+'-response').show();
+							  $('#mce-'+resp.result+'-response').html(resp.msg);
+							  $('#mc-embedded-subscribe-form').each(function(){
+								  this.reset();
+							});
+						  } else {
+							  var index = -1;
+							  var msg;
+							  try {
+								  var parts = resp.msg.split(' - ',2);
+								  if (parts[1]==undefined){
+									  msg = resp.msg;
+								  } else {
+									  i = parseInt(parts[0]);
+									  if (i.toString() == parts[0]){
+										  index = parts[0];
+										  msg = parts[1];
+									  } else {
+										  index = -1;
+										  msg = resp.msg;
+									  }
+								  }
+							  } catch(e){
+								  index = -1;
+								  msg = resp.msg;
+							  }
+							  try{
+								  if (index== -1){
+									  $('#mce-'+resp.result+'-response').show();
+									  $('#mce-'+resp.result+'-response').html(msg);            
+								  } else {
+									  err_id = 'mce_tmp_error_msg';
+									  html = '<div id="'+err_id+'" style="'+err_style+'"> '+msg+'</div>';
+									  
+									  var input_id = '#mc_embed_signup';
+									  var f = $(input_id);
+									  if (ftypes[index]=='address'){
+										  input_id = '#mce-'+fnames[index]+'-addr1';
+										  f = $(input_id).parent().parent().get(0);
+									  } else if (ftypes[index]=='date'){
+										  input_id = '#mce-'+fnames[index]+'-month';
+										  f = $(input_id).parent().parent().get(0);
+									  } else {
+										  input_id = '#mce-'+fnames[index];
+										  f = $().parent(input_id).get(0);
+									  }
+									  if (f){
+										  $(f).append(html);
+										  $(input_id).focus();
+									  } else {
+										  $('#mce-'+resp.result+'-response').show();
+										  $('#mce-'+resp.result+'-response').html(msg);
+									  }
+								  }
+							  } catch(e){
+								  $('#mce-'+resp.result+'-response').show();
+								  $('#mce-'+resp.result+'-response').html(msg);
+							  }
+						  }
+						}
+					</script>
+					<!--End mc_embed_signup-->
+					<p class="subscribe-p">Get the best tips in your inbox! (Mailchimp email subscribe form with validation)</p>
+
+					<h4>Follow Us:</h4>
+					<span class="social"><a id="twitterb" href="3">u</a> <a id="facebookb" href="3">f</a> <a id="googleb" href="3">g</a> <a id="pinterestb" href="3">l</a> <a id="stumbleb" href="3">N</a> <a id="flickrb" href="3">h</a> <a id="wordb" href="3">w</a> <a id="rssb" href="3">r</a></span>
+				    <div class="footer-brand"><a class="brand" href="index.html">Ocean </a> Responsive, Retina Website Template</div> 
+				</div> <!-- End span8 -->
+				<div class="span4 contact-border">
+					<form action="/" class="validate" target="_blank">
+						<h4>Contact Us:</h4>
+						<input type="text" size="25" maxlength="255" placeholder="Full Name" value="">
+						<br>
+						<input type="email" size="25" maxlength="255" placeholder="Email" value="">
+						<br>     
+						<textarea rows="5" placeholder="Message"></textarea>
+						<br>
+						<input type="submit" class="default-btn" name="submit" value="Send Message">     
+					</form>
+				</div> <!-- End span4 -->
+			</div> <!-- End Row -->
+		</div> <!-- End container -->
+	</footer> <!-- End footer -->
+</body>
+</html>
